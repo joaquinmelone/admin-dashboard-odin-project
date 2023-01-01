@@ -57,7 +57,7 @@ label {
 #search {
     width: 400px;
     height: 25px;
-    background-color: rgb(194, 190, 190);
+    background-color: rgb(238, 234, 234);
     border-radius: 15px;
     border: none;
 }
@@ -99,7 +99,9 @@ label {
 }
 
 .sidebar-right {
+    display: flex;
     padding-right: 50px;
+    gap: 25px;
 }
 
 button {
@@ -112,6 +114,14 @@ button {
     border-radius: 10px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
 /* DASHBOARD */
 
 .dashboard {
@@ -122,14 +132,13 @@ button {
     color: white;
 }
 
-.dashboard-top-section div {
+.dashboard-top-section > div {
     display: flex;
     align-items: center;
     justify-content: center;
 
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 50px;
 }
 
 .dashboard-middle-section {
@@ -146,6 +155,10 @@ button {
     gap: 25px;
 }
 
+.dashboard-middle-section > div, .dashboard-top-section > div, .dashboard-bottom-section > div {
+    padding-bottom: 15px;
+}
+
 .giant-icon {
     width: 75px;
     height: 75px;
@@ -156,6 +169,15 @@ button {
     height: 35px;
 }
 
+a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* CONTENT */
 
 .content {
@@ -164,7 +186,7 @@ button {
 
     grid-column: 2 / 3;
     grid-row: 3 / 5;
-    background-color: rgb(194, 190, 190);
+    background-color: rgb(238, 234, 234);
 }
 
 .content-left-text {
@@ -201,10 +223,7 @@ button {
 
 .content-announcements, .content-trending {
     border-radius: 15px;
-}
-
-.content-announcements div {
-    flex: 1;
+    box-shadow: 5px 5px 5px #bdb9b9;
 }
 
 .content-announcements {
@@ -214,6 +233,10 @@ button {
     background-color: white;
     border-radius: 15px;
     padding: 10px;
+}
+
+.content-announcements div {
+    flex: 1;
 }
 
 .announcements-title {
@@ -256,10 +279,12 @@ button {
     align-items: center;
     justify-content: center;
     padding: 5px;
-    
+    border-left: 10px solid white;
+
+    box-shadow: 5px 5px 5px #bdb9b9;
     background-color: white;
     border-radius: 15px;
-
+    border-left-color: brown;
 }
 
 .projects-title {
@@ -276,6 +301,8 @@ button {
     gap: 10px;
 }
 
+/* FOOTER */
+
 footer {
     display: flex;
     justify-content: center;
@@ -285,4 +312,19 @@ footer {
     color: white;
     grid-column: 1 / 3;
     background-color: black;
+}
+
+/* SOME ANIMATIONS */
+
+.content-projects:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.projects-icon:hover, .small-profile-pic:hover, .header-icon:hover {
+    cursor: pointer;
+}
+
+.projects-icon:active, .small-profile-pic:active, .header-icon:active {
+    transform: scale(0.95);
 }
